@@ -10,3 +10,7 @@ Rails.application.routes.draw do
   end
   resources :users, only: :show
 end
+Rails.application.routes.draw do
+  resources :blogs
+  root 'tweets#index' #トップページをblogsコントローラのindexアクションに設定
+end
